@@ -17,6 +17,7 @@ public class Function
     /// <returns></returns>
     public string FunctionHandler(object input, ILambdaContext context)
     {
+        //Function handler code from jcutrono
         dynamic json = JsonConvert.DeserializeObject<dynamic>(input.ToString());
         
         string payload = $"{{'text':'Issue Created: {json.issue.html_url}'}}";
